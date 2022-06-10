@@ -41,7 +41,7 @@ img {
 }
 
 #content {
-    height: 150vh;
+
     width: 100vw;
     display: grid;
     grid-template-rows: 1fr 30vh 90px;
@@ -76,7 +76,21 @@ img {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+}
 
+.main-content-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: var(--medium-spacing);
+    padding: var(--medium-spacing);
+    background-color: rgb(204, 202, 202);
+    box-shadow: inset 0 1px 5px grey;
+}
+
+.menu-items {
+    height: 500px;
+    border-radius: 15px;
+    background-color: white;
 }
 
 .bottom-content {
