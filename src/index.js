@@ -4,6 +4,10 @@ import restaurantPic from './a1.jpg';
 import food1 from './food1.jpg'
 import food2 from './food2.jpg'
 import food3 from './food3.jpg'
+import dessert1 from './dessert1.jpg'
+import dessert2 from './dessert2.jpg'
+import drink1 from './drinks1.jpg'
+import drink2 from './drink2.jpg'
 
 // container which changes input based on page tabs
 const contentContainer = document.querySelector('#content');
@@ -61,12 +65,31 @@ const menuBody = (() => {
         drinkOne.classList.add('menu-items');
         drinkTwo.classList.add('menu-items');
 
-        foodOne.setAttribute('style', 'background: url("/src/food1.jpg") center no-repeat; background-size: cover');
-        foodTwo.setAttribute('style', 'background: url("/src/food3.jpg") no-repeat; background-size: cover');
-        sideOne.setAttribute('style', 'background: url("/src/dessert2.jpg") no-repeat; background-size: cover');
-        sideTwo.setAttribute('style', 'background: url("/src/dessert1.jpg") center no-repeat; background-size: cover');
-        drinkOne.setAttribute('style', 'background: url("/src/drinks1.jpg") center no-repeat; background-size: cover');
-        drinkTwo.setAttribute('style', 'background: url("/src/drink2.jpg") center no-repeat; background-size: cover');
+        const f1 = new Image();
+        f1.src = food1;
+
+        const f2 = new Image();
+        f2.src = food3;
+
+        const d1 = new Image();
+        d1.src = dessert1;
+
+        const d2 = new Image();
+        d2.src = dessert2;
+
+        const dr1 = new Image();
+        dr1.src = drink1;
+
+        const dr2 = new Image();
+        dr2.src = drink2;
+        
+
+        foodOne.setAttribute("style", "background: url('" + f1.src + "'); background-repeat: no-repeat; background-size: cover; background-position: center");
+        foodTwo.setAttribute("style", "background: url('" + f2.src + "'); background-repeat: no-repeat; background-size: cover; background-position: right");
+        sideOne.setAttribute("style", "background: url('" + d1.src + "'); background-repeat: no-repeat; background-size: cover; background-position: center");
+        sideTwo.setAttribute("style", "background: url('" + d2.src + "'); background-repeat: no-repeat; background-size: cover");
+        drinkOne.setAttribute("style", "background: url('" + dr1.src + "'); background-repeat: no-repeat; background-size: cover; background-position: center");
+        drinkTwo.setAttribute("style", "background: url('" + dr2.src + "'); background-repeat: no-repeat; background-size: cover; background-position: center");
 
         mainContentItems.appendChild(foodOne);
         mainContentItems.appendChild(foodTwo);
